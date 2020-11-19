@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel = "stylesheet" href="EX.css" >
+    <title>Document</title>
+</head>
+
+<body onload = "click()">
+    <div id="About" class="content">
+      <h1>About</h1>
+      <p>Custom Software Development Company</p>
+    </div>
+
+    <div id="Products" class="content">
+      <h1>Products</h1>
+      <p>Building tailored software to address critical needs of global enterprises.</p>
+    </div>
+
+    <div id="Technology" class="content">
+      <h1>Technology</h1>
+      <p>Machine Learning, Artificial Intelligent, Cloud Platform.</p>
+    </div>
+
+    <div id="Downloads" class="content">
+      <h1>Downloads</h1>
+      <p>You can download a free 10 days trial.</p>
+    </div>
+
+    <button id="default" class="tab" onclick="openMenu('About', this, 'tomato')" >About</button>
+<button class="tab1" >About</button>
+    <button class="tab" onclick="openMenu('Products', this, 'darkolivegreen')" >Products</button>
+<button class="tab1" >Products</button>
+    <button class="tab" onclick="openMenu('Technology', this, 'dodgerblue')">Technology</button>
+<button class="tab1" >Technology</button>
+    <button class="tab" onclick="openMenu('Downloads', this, 'orange')" >Downloads</button>
+<button class="tab1" >Downloads</button>
+
+    <script = "text/javascript">
+var element = document.getElementsByClassName('content'); 
+var bg = document.getElementsByClassName('tab');
+var bg1 = document.getElementsByClassName('tab1');
+var i;
+element[0].style.display = "block";
+
+function click(){
+bg[0].style.display = "inline";
+bg[0].style.pointerEvents = "none";
+}
+
+function openMenu(target, seltab, color){
+bg[0].style.pointerEvents = "all";
+bg[0].style.backgroundColor = "#555";
+
+if (target == 'About'){
+for(i=0;i<element.length;i++){
+element[i].style.display = "none"
+}
+element[0].style.display = "block";
+for(i=0;i<bg.length;i++){
+bg[i].style.display = "inline";
+bg1[i].style.display = "none";
+}
+bg1[0].style.display = "inline";
+bg[0].style.display = "none";
+bg1[0].style.backgroundColor = color ;
+}
+
+else if(target == 'Products'){
+for(i=0;i<element.length;i++){
+element[i].style.display = "none"
+}
+element[1].style.display = "block";
+for(i=0;i<bg.length;i++){
+bg[i].style.display = "inline";
+bg1[i].style.display = "none";
+}
+bg1[1].style.display = "inline";
+bg[1].style.display = "none";
+bg1[1].style.backgroundColor = color ;
+}
+
+else if(target == 'Technology'){
+for(i=0;i<element.length;i++){
+element[i].style.display = "none"
+}
+element[2].style.display = "block";
+for(i=0;i<bg.length;i++){
+bg[i].style.display = "inline";
+bg1[i].style.display = "none";
+}
+bg1[2].style.display = "inline";
+bg[2].style.display = "none";
+bg1[2].style.backgroundColor = color ;
+}
+
+else if(target == 'Downloads'){
+for(i=0;i<element.length;i++){
+element[i].style.display = "none"
+}
+element[3].style.display = "block";
+for(i=0;i<bg.length;i++){
+bg[i].style.display = "inline";
+bg1[i].style.display = "none";
+}
+bg1[3].style.display = "inline";
+bg[3].style.display = "none";
+bg1[3].style.backgroundColor = color ;
+}
+}
+
+
+    </script>
+  </body>
+</html>
